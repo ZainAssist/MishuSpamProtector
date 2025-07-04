@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  bot:
+    container_name: Zainu
+    stop_grace_period: 1m
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - config.env
