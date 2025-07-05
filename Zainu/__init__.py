@@ -18,7 +18,7 @@ else:
 
 session = ClientSession()
 
-arq = ARQ(ARQ_API_URL, ARQ_API_KEY, session)
+Zainu = ARQ(ARQ_API_URL, ARQ_API_KEY, session)
 
 conn = connect(DB_NAME)
 
