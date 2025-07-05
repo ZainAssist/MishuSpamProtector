@@ -74,7 +74,7 @@ async def delete_nsfw_notify(
     **Hentai:** `{result.hentai} %`
     **Drawings:** `{result.drawings} %`
 """
-    await spr.send_message(message.chat.id, text=msg)
+    await Zainu.send_message(message.chat.id, text=msg)
     increment_nsfw_count(message.from_user.id)
 
 
@@ -105,7 +105,7 @@ __Message has been deleted__
         {
             "Correct (0)": "upvote_spam",
             "Incorrect (0)": "downvote_spam",
-            "Chat": "https://t.me/" + (message.chat.username or "Logs channel here"),
+            "Chat": "https://t.me/" + (message.chat.username or "MishuSpamLogs"),
         },
         2
     )
@@ -124,7 +124,7 @@ __Message has been deleted__
 
 async def kick_user_notify(message: Message):
     try:
-        await spr.ban_chat_member(
+        await Zainu.ban_chat_member(
             message.chat.id, message.from_user.id
         )
     except (ChatAdminRequired, UserAdminInvalid):
