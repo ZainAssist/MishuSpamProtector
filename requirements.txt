@@ -1,3 +1,4 @@
+python:3.9.5-buster
 pyrogram
 TgCrypto
 python-arq
